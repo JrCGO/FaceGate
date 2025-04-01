@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White">
+
+    <ImageView
+        android:id="@+id/logo_ahards"
+        android:layout_width="296px"
+        android:layout_height="76px"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ahards" />
+
+    <ImageView
+        android:id="@+id/photo_user"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/image_border"
+        app:layout_constraintBottom_toBottomOf="@+id/border_photo_user"
+        app:layout_constraintEnd_toEndOf="@+id/border_photo_user"
+        app:layout_constraintStart_toStartOf="@+id/border_photo_user"
+        app:layout_constraintTop_toTopOf="@+id/border_photo_user"
+        android:clipToOutline="true"
+        app:srcCompat="@drawable/photo_user" />
+
+    <View
+        android:id="@+id/border_photo_user"
+        android:layout_width="424px"
+        android:layout_height="424px"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/image_border_blocked"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_ahards" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/axiforma_semibold"
+        android:text="Data e Hora"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/border_photo_user" />
+
+    <TextView
+        android:id="@+id/nameFuncionario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/axiforma_semibold"
+        android:text="HORÁRIO NÃO PERMITIDO"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView" />
+
+    <TextView
+        android:id="@+id/cpf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="104.xxx.xxx-82"
+        android:textSize="16sp"
+        android:fontFamily="@font/axiforma_semibold"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameFuncionario" />
+
+    <ImageView
+        android:id="@+id/blockd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="196dp"
+        app:layout_constraintBottom_toTopOf="@+id/acesssucess"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_blocked" />
+
+    <TextView
+        android:id="@+id/acesssucess"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="760dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/status_recognized_rounder"
+        android:backgroundTint="@color/statusBlocked"
+        android:fontFamily="@font/axiforma_bold"
+        android:gravity="center"
+        android:text="ACESSO NEGADO"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="White">#FFFFFF</color>
+    <color name="textColor">#797979</color>
+    <color name="btnColor">#2165B7</color>
+    <color name="btnColorHover">#0D478C</color>
+    <color name="statusSuccess">#33B040</color>
+    <color name="statusDenied">#DE3636</color>
+    <color name="statusBlocked">#DEA936</color>
+    <color name="backgroundP">#151619</color>
+    <color name="backgroundText">#1F2023</color>
+</resources>

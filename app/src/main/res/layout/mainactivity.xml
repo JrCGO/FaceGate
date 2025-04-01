@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/White"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/status_online"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="38dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/status_online" />
+
+    <ImageView
+        android:id="@+id/logo_ahards"
+        android:layout_width="296px"
+        android:layout_height="76px"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ahards"
+        android:clickable="true"
+        android:focusable="true" />
+
+    <ImageView
+        android:id="@+id/btn_hamburguer"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/btn_hamburguer" />
+
+    <ImageView
+        android:id="@+id/circle_main"
+        android:layout_width="520px"
+        android:layout_height="520px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle_main" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/axiforma_regular"
+        android:text="Dia e Mês"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textClock"
+        app:layout_constraintEnd_toEndOf="@+id/circle_main"
+        app:layout_constraintStart_toStartOf="@+id/circle_main"
+        app:layout_constraintTop_toTopOf="@+id/circle_main"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/weekDayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Dia da semana"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/axiforma_regular"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textClock"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextClock
+        android:id="@+id/textClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/axiforma_bold"
+        android:textColor="@color/textColor"
+        android:textSize="44sp"
+        app:layout_constraintBottom_toBottomOf="@+id/circle_main"
+        app:layout_constraintEnd_toEndOf="@+id/circle_main"
+        app:layout_constraintStart_toStartOf="@+id/circle_main"
+        app:layout_constraintTop_toTopOf="@+id/circle_main" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_acess"
+        android:layout_width="0dp"
+        android:layout_height="96px"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="760dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_background"
+        android:fontFamily="@font/axiforma_bold"
+        android:text="LIBERAR ACESSO"
+        android:textColor="@color/White"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

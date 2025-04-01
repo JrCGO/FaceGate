@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/White"
+    android:layout_height="match_parent">
+
+    <!-- Logo Ahards -->
+    <ImageView
+        android:id="@+id/logo_ahards"
+        android:layout_width="296px"
+        android:layout_height="76px"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_ahards" />
+
+    <!-- Botão Arrow: Voltar -->
+    <ImageView
+        android:id="@+id/arrowmenu"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="58dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_ahards"
+        app:srcCompat="@drawable/arrow" />
+
+    <!-- Texto: Menu Principal -->
+    <TextView
+        android:id="@+id/menuprincipal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/axiforma_regular"
+        android:text="MENU PRINCIPAL"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/arrowmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/arrowmenu" />
+
+    <!-- Últimos acessos -->
+    <LinearLayout
+        android:id="@+id/btn_acessos"
+        android:layout_width="520px"
+        android:layout_height="70px"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toBottomOf="@+id/view3">
+
+        <TextView
+            android:id="@+id/text_btn_acess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="ÚLTIMOS ACESSOS"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Lista de Funcionários -->
+    <LinearLayout
+        android:id="@+id/btn_funcionarios"
+        android:layout_width="520px"
+        android:layout_height="70px"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/btn_acessos"
+        app:layout_constraintTop_toBottomOf="@+id/btn_acessos">
+
+        <TextView
+            android:id="@+id/text_btn_funcionarios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="LISTA DE FUNCIONÁRIOS"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Rede/Conexão -->
+    <LinearLayout
+        android:id="@+id/btn_redeconexao"
+        android:layout_width="520px"
+        android:layout_height="70px"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/btn_funcionarios"
+        app:layout_constraintTop_toBottomOf="@+id/btn_funcionarios">
+
+        <TextView
+            android:id="@+id/text_redeconexao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="REDE/CONEXÃO"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Acesso Restrito -->
+
+    <!-- Configurações Gerais -->
+
+    <LinearLayout
+        android:id="@+id/btn_configerais"
+        android:layout_width="520px"
+        android:layout_height="70px"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/btn_redeconexao"
+        app:layout_constraintTop_toBottomOf="@+id/btn_redeconexao">
+
+        <TextView
+            android:id="@+id/text_configerais"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="CONFIGURAÇÕES GERAIS"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Informações do Sistema -->
+    <LinearLayout
+        android:id="@+id/btn_infosistema"
+        android:layout_width="520px"
+        android:layout_height="70px"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/btn_configerais"
+        app:layout_constraintTop_toBottomOf="@+id/btn_configerais">
+
+        <TextView
+            android:id="@+id/text_infosistema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="INFORMAÇÕES DO SISTEMA"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Produção -->
+    <LinearLayout
+        android:id="@+id/btn_modproducao"
+        android:layout_width="0dp"
+        android:layout_height="70px"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_infosistema"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_infosistema"
+        app:layout_constraintTop_toBottomOf="@+id/btn_infosistema">
+
+        <TextView
+            android:id="@+id/text_modproducao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="PRODUÇÃO"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <!-- Técnico -->
+
+    <LinearLayout
+        android:id="@+id/btn_modtecnico"
+        android:layout_width="0dp"
+        android:layout_height="70px"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/button_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_infosistema"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/btn_modproducao"
+        app:layout_constraintTop_toBottomOf="@+id/btn_modproducao">
+
+        <TextView
+            android:id="@+id/text_modtecnico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="TÉCNICO"
+            android:textColor="@color/White"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/arrowopen"
+            android:layout_width="32px"
+            android:layout_height="32px"
+            android:layout_marginEnd="24dp"
+            app:srcCompat="@drawable/arrow_open" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="0dp"
+        android:layout_height="134px"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="48dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrowmenu" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="54px"
+        android:layout_height="81px"
+        android:layout_marginStart="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3"
+        app:srcCompat="@drawable/vectorteste" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:lineSpacingExtra="8sp"
+        android:text="VISUALIZE AS ENTRADAS REGISTRADAS NAS ÚLTIMAS 24 HORAS"
+        android:textAlignment="center"
+        android:textColor="@color/White"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/view3"
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
