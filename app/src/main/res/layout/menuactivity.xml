@@ -6,340 +6,562 @@
     android:background="@color/White"
     android:layout_height="match_parent">
 
-    <!-- Logo Ahards -->
-    <ImageView
-        android:id="@+id/logo_ahards"
-        android:layout_width="296px"
-        android:layout_height="76px"
-        android:layout_marginTop="44dp"
+    <!-- Background Azul -->
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:layout_height="288px"
+        android:background="@drawable/background_menu_blue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_ahards" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Botão Arrow: Voltar -->
+    <!-- Logo -->
     <ImageView
-        android:id="@+id/arrowmenu"
-        android:layout_width="50px"
-        android:layout_height="50px"
+        android:id="@+id/logo_menu"
+        android:layout_width="296px"
+        android:layout_height="76px"
+        android:layout_marginTop="38dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:srcCompat="@drawable/logo_menu" />
+
+    <!-- Botão: Voltar Arrow -->
+    <ImageView
+        android:id="@+id/btn_menu_arrow"
+        android:layout_width="68px"
+        android:layout_height="68px"
         android:layout_marginStart="38dp"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo_ahards"
-        app:srcCompat="@drawable/arrow" />
+        app:layout_constraintTop_toBottomOf="@+id/logo_menu"
+        app:srcCompat="@drawable/arrow_menu_azul" />
 
     <!-- Texto: Menu Principal -->
     <TextView
-        android:id="@+id/menuprincipal"
+        android:id="@+id/text_menu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/axiforma_regular"
-        android:text="MENU PRINCIPAL"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/arrowmenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/arrowmenu" />
-
-    <!-- Últimos acessos -->
-    <LinearLayout
-        android:id="@+id/btn_acessos"
-        android:layout_width="520px"
-        android:layout_height="70px"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view3">
-
-        <TextView
-            android:id="@+id/text_btn_acess"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="ÚLTIMOS ACESSOS"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Lista de Funcionários -->
-    <LinearLayout
-        android:id="@+id/btn_funcionarios"
-        android:layout_width="520px"
-        android:layout_height="70px"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/btn_acessos"
-        app:layout_constraintTop_toBottomOf="@+id/btn_acessos">
-
-        <TextView
-            android:id="@+id/text_btn_funcionarios"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="LISTA DE FUNCIONÁRIOS"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Rede/Conexão -->
-    <LinearLayout
-        android:id="@+id/btn_redeconexao"
-        android:layout_width="520px"
-        android:layout_height="70px"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/btn_funcionarios"
-        app:layout_constraintTop_toBottomOf="@+id/btn_funcionarios">
-
-        <TextView
-            android:id="@+id/text_redeconexao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="REDE/CONEXÃO"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Acesso Restrito -->
-
-    <!-- Configurações Gerais -->
-
-    <LinearLayout
-        android:id="@+id/btn_configerais"
-        android:layout_width="520px"
-        android:layout_height="70px"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/btn_redeconexao"
-        app:layout_constraintTop_toBottomOf="@+id/btn_redeconexao">
-
-        <TextView
-            android:id="@+id/text_configerais"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="CONFIGURAÇÕES GERAIS"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Informações do Sistema -->
-    <LinearLayout
-        android:id="@+id/btn_infosistema"
-        android:layout_width="520px"
-        android:layout_height="70px"
-        android:layout_marginTop="14dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@+id/btn_configerais"
-        app:layout_constraintTop_toBottomOf="@+id/btn_configerais">
-
-        <TextView
-            android:id="@+id/text_infosistema"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="INFORMAÇÕES DO SISTEMA"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Produção -->
-    <LinearLayout
-        android:id="@+id/btn_modproducao"
-        android:layout_width="0dp"
-        android:layout_height="70px"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="68dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_infosistema"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_infosistema"
-        app:layout_constraintTop_toBottomOf="@+id/btn_infosistema">
-
-        <TextView
-            android:id="@+id/text_modproducao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="PRODUÇÃO"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <!-- Técnico -->
-
-    <LinearLayout
-        android:id="@+id/btn_modtecnico"
-        android:layout_width="0dp"
-        android:layout_height="70px"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="68dp"
-        android:background="@drawable/button_background"
-        android:gravity="center_vertical"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="@+id/btn_infosistema"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_modproducao"
-        app:layout_constraintTop_toBottomOf="@+id/btn_modproducao">
-
-        <TextView
-            android:id="@+id/text_modtecnico"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:fontFamily="@font/lato_bold"
-            android:text="TÉCNICO"
-            android:textColor="@color/White"
-            android:textSize="12sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-        <ImageView
-            android:id="@+id/arrowopen"
-            android:layout_width="32px"
-            android:layout_height="32px"
-            android:layout_marginEnd="24dp"
-            app:srcCompat="@drawable/arrow_open" />
-
-    </LinearLayout>
-
-    <View
-        android:id="@+id/view3"
-        android:layout_width="0dp"
-        android:layout_height="134px"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/button_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arrowmenu" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="54px"
-        android:layout_height="81px"
-        android:layout_marginStart="32dp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintStart_toStartOf="@+id/view3"
-        app:layout_constraintTop_toTopOf="@+id/view3"
-        app:srcCompat="@drawable/vectorteste" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
         android:fontFamily="@font/lato_bold"
-        android:lineSpacingExtra="8sp"
-        android:text="VISUALIZE AS ENTRADAS REGISTRADAS NAS ÚLTIMAS 24 HORAS"
-        android:textAlignment="center"
         android:textColor="@color/White"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/view3"
-        app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintStart_toEndOf="@+id/imageView9"
-        app:layout_constraintTop_toTopOf="@+id/view3" />
+        android:textSize="15sp"
+        android:text="MENU PRINCIPAL"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_menu_arrow"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/btn_menu_arrow" />
+
+    <!-- Básicas -->
+    <TextView
+        android:id="@+id/textBasic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Básico"
+        android:textColor="#696969"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cardBasic"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+    <LinearLayout
+        android:id="@+id/cardBasic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/background_list_menu"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textBasic">
+
+        <!-- Lista de acesso -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_listAcess"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_cadeado" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="LISTA DE ACESSOS"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Lista de Funcionário -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_ListFuncionario"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            android:layout_marginBottom="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_funcionario" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="LISTA DE FUNCIONÁRIOS"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Avançadas -->
+    <TextView
+        android:id="@+id/textAvancado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Avançado"
+        android:textColor="#696969"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cardAvancado"
+        app:layout_constraintTop_toBottomOf="@+id/cardBasic" />
+    <LinearLayout
+        android:id="@+id/cardAvancado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#f4f4f4"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textAvancado">
+
+        <!-- Rede/Conexão -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_RedeConexao"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_rede" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="REDE/CONEXÃO"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Informações do Sistema -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_InfoSistema"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_info" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="INFORMAÇÕES DO SISTEMA"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Configurações Gerais -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_ConfigGerais"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            android:layout_marginBottom="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_settings" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="CONFIGURAÇÕES GERAIS"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- Restrito -->
+    <TextView
+        android:id="@+id/textRestrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Restrito"
+        android:textColor="#696969"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/cardRestrito"
+        app:layout_constraintTop_toBottomOf="@+id/cardAvancado" />
+    <LinearLayout
+        android:id="@+id/cardRestrito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#f4f4f4"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRestrito">
+
+        <!-- Produção -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_Producao"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_producao" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="PRODUÇÃO"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Técnico -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_Tecnico"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_tecnico" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="TÉCNICO"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Restrito -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/menu_btn_Restrito"
+            android:layout_width="560px"
+            android:layout_height="52px"
+            android:layout_marginStart="24px"
+            android:layout_marginTop="24px"
+            android:layout_marginEnd="24px"
+            android:layout_marginBottom="24px"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#f4f4f4"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- Ícone Início -->
+                <ImageView
+                    android:layout_width="32px"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/icon_menu_restrito" />
+
+                <!-- Texto na esquerda -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="38px"
+                    android:layout_marginEnd="48dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_bold"
+                    android:gravity="center"
+                    android:text="RESTRITO"
+                    android:textAlignment="textStart"
+                    android:textColor="#696969"
+                    android:textSize="12sp" />
+
+                <!-- Ícone Final -->
+                <ImageView
+                    android:layout_width="14px"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="28px"
+                    android:src="@drawable/icon_menu_arrow" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
