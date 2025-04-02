@@ -53,13 +53,12 @@
         app:layout_constraintTop_toTopOf="@+id/btn_menu_arrow" />
 
     <!-- Básicas -->
-
     <LinearLayout
         android:id="@+id/cardBasic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="38dp"
-        android:background="@drawable/background_list_menu"
+        android:layout_marginTop="48dp"
+        android:background="#fff"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,12 +68,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/menu_btn_listAcess"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
+            android:layout_height="54dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +102,7 @@
                     android:text="RECIBO DE ACESSO"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -123,13 +119,10 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/menu_btn_ListFuncionario"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
-            android:layout_marginBottom="24px"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="4dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +155,7 @@
                     android:text="FUNCIONÁRIOS"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -177,28 +170,25 @@
     </LinearLayout>
 
     <!-- Avançadas -->
-
     <LinearLayout
         android:id="@+id/cardAvancado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/background_list_menu"
+        android:background="#fff"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/cardRestrito"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardBasic">
 
         <!-- Rede/Conexão -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_RedeConexao"
+            android:id="@+id/menu_btn_redeconexao"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
+            android:layout_height="54dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -207,7 +197,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -231,7 +220,7 @@
                     android:text="REDE/CONEXÃO"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -246,14 +235,12 @@
 
         <!-- Informações do Sistema -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_InfoSistema"
+            android:id="@+id/menu_btn_infosistema"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -286,7 +273,7 @@
                     android:text="INFORMAÇÕES DO SISTEMA"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -301,15 +288,12 @@
 
         <!-- Configurações Gerais -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_ConfigGerais"
+            android:id="@+id/menu_btn_configerais"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
-            android:layout_marginBottom="24px"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -339,10 +323,10 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center"
-                    android:text="CONFIGURAÇÕES GERAIS"
+                    android:text="CONFIGURAÇÕES GERAS"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -358,28 +342,25 @@
     </LinearLayout>
 
     <!-- Restrito -->
-
     <LinearLayout
         android:id="@+id/cardRestrito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="38dp"
-        android:background="@drawable/background_list_menu"
+        android:layout_marginBottom="48dp"
+        android:background="#fff"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent">
 
         <!-- Produção -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_Producao"
+            android:id="@+id/menu_btn_producao"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
+            android:layout_height="54dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -388,7 +369,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -412,7 +392,7 @@
                     android:text="PRODUÇÃO"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -423,18 +403,17 @@
 
             </LinearLayout>
 
+            <!-- Produção -->
         </androidx.cardview.widget.CardView>
 
         <!-- Técnico -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_Tecnico"
+            android:id="@+id/menu_btn_tecnico"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -453,7 +432,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/icon_menu_tecnico" />
+                    android:src="@drawable/icon_menu_info" />
 
                 <!-- Texto na esquerda -->
                 <TextView
@@ -467,7 +446,7 @@
                     android:text="TÉCNICO"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView
@@ -482,15 +461,12 @@
 
         <!-- Restrito -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_Restrito"
+            android:id="@+id/menu_btn_restrito"
             android:layout_width="560px"
-            android:layout_height="68px"
-            android:layout_marginStart="24px"
-            android:layout_marginTop="24px"
-            android:layout_marginEnd="24px"
-            android:layout_marginBottom="24px"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
             app:cardBackgroundColor="@color/card_color_selector"
-            app:cardCornerRadius="0dp"
+            app:cardCornerRadius="8dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -509,7 +485,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginStart="32dp"
                     android:layout_marginEnd="12dp"
-                    android:src="@drawable/icon_menu_restrito" />
+                    android:src="@drawable/icon_menu_info" />
 
                 <!-- Texto na esquerda -->
                 <TextView
@@ -523,7 +499,7 @@
                     android:text="RESTRITO"
                     android:textAlignment="textStart"
                     android:textColor="#fff"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
                 <!-- Ícone Final -->
                 <ImageView

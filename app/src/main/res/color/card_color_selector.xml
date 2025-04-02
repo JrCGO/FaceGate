@@ -4,5 +4,5 @@
     <item android:color="#0D478C" android:state_pressed="true"/>
 
     <!-- Cor padrão (quando não está pressionado) -->
-    <item android:color="@android:color/transparent"/>
+    <item android:color="#2165B7"/>
 </selector>
