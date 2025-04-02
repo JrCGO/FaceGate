@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/White"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/White">
 
     <!-- Background Azul -->
     <View
@@ -44,65 +44,105 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
+        android:text="RECIBO DE ACESSO"
         android:textColor="@color/White"
         android:textSize="15sp"
-        android:text="RECIBO DE ACESSO"
         app:layout_constraintBottom_toBottomOf="@+id/btn_menu_arrow"
         app:layout_constraintEnd_toEndOf="@+id/view"
         app:layout_constraintStart_toStartOf="@+id/view"
         app:layout_constraintTop_toTopOf="@+id/btn_menu_arrow" />
 
     <!-- Card: Pesquisar -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="488px"
-        android:layout_height="78px"
-        android:layout_marginTop="48dp"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="4dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <LinearLayout
-            android:layout_width="488px"
-            android:layout_height="match_parent"
-            android:background="@drawable/border_card_func"
-            android:gravity="center_vertical"
+        <EditText
+            android:id="@+id/caixaSearch"
+            android:layout_width="0dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/background_pesquisar"
+            android:drawableStart="@drawable/icon_menu_search"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="Pesquisar"
+            android:inputType="text"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/icon_menu_filter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/icon_menu_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="60dp"
+            app:layout_constraintBottom_toBottomOf="@+id/caixaSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/caixaSearch"
+            app:srcCompat="@drawable/icon_menu_filter" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
             android:orientation="horizontal"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp">
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/caixaSearch"
+            app:layout_constraintTop_toBottomOf="@+id/caixaSearch">
 
-            <ImageView
-                android:layout_width="24px"
-                android:layout_height="24px"
-                android:src="@drawable/icon_menu_lupa" />
-
-            <TextView
-                android:layout_width="0dp"
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="32px"
-                android:layout_weight="1"
-                android:fontFamily="@font/lato_regular"
-                android:text="PROCURAR"
-                android:textColor="@color/textColor"
-                android:textSize="10sp" />
+                android:layout_marginEnd="8dp"
+                android:text="LIBERADO"
+                android:textSize="12sp" />
 
-            <ImageView
-                android:layout_width="24px"
-                android:layout_height="24px"
-                android:src="@drawable/icon_menu_filtro" />
-        </LinearLayout>
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="NÃO RECONHECIDO"
+                android:textSize="12sp" />
 
-    </androidx.cardview.widget.CardView>
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:text="BLOQUEADO"
+                android:textSize="12sp" />
+
+        </RadioGroup>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="330dp"
         android:layout_marginBottom="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,7 +152,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -174,7 +214,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -236,7 +276,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -298,7 +338,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -360,7 +400,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -422,7 +462,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -484,7 +524,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -546,7 +586,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -608,7 +648,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -670,7 +710,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -732,7 +772,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -794,7 +834,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -856,7 +896,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -918,7 +958,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -980,7 +1020,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
@@ -1042,7 +1082,7 @@
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
-                android:layout_width="600px"
+                android:layout_width="410dp"
                 android:layout_height="148px"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"

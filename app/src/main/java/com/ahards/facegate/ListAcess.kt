@@ -2,7 +2,9 @@ package com.ahards.facegate
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageView
+import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 
 class ListAcess : AppCompatActivity() {
@@ -19,7 +21,17 @@ class ListAcess : AppCompatActivity() {
             overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }
 
+        val iconMenuFilter = findViewById<ImageView>(R.id.icon_menu_filter)
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroup)
 
+        iconMenuFilter.setOnClickListener {
+            // Alternar visibilidade do RadioGroup
+            if (radioGroup.visibility == View.GONE) {
+                radioGroup.visibility = View.VISIBLE
+            } else {
+                radioGroup.visibility = View.GONE
+            }
+        }
 
     }
 }
