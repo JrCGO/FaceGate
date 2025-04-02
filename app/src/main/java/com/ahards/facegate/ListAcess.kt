@@ -11,7 +11,7 @@ class ListAcess : AppCompatActivity() {
         setContentView(R.layout.listacess)
 
         // Achando o botão voltar | Retornar para MenuActivity
-        val menuArrow: ImageView = findViewById(R.id.arrowmenu)
+        val menuArrow: ImageView = findViewById(R.id.btn_menu_arrow)
         menuArrow.setOnClickListener {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent) // Iniciando a nova activity

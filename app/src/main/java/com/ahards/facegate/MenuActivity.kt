@@ -12,7 +12,7 @@ import android.widget.LinearLayout
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.menu_layout2)
+        setContentView(R.layout.menuactivity)
 
         // Achando o botão voltar | Retornar para MainActivity
         val menuArrow: ImageView = findViewById(R.id.btn_menu_arrow)
