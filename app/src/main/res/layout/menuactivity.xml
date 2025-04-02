@@ -7,6 +7,12 @@
     android:layout_height="match_parent">
 
     <!-- Background Azul -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    &lt;!-- Card: Funionário -->" />
+
     <View
         android:id="@+id/view"
         android:layout_width="wrap_content"
@@ -53,27 +59,17 @@
         app:layout_constraintTop_toTopOf="@+id/btn_menu_arrow" />
 
     <!-- Básicas -->
-    <TextView
-        android:id="@+id/textBasic"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Básico"
-        android:textColor="#696969"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/cardBasic"
-        app:layout_constraintTop_toBottomOf="@+id/view" />
+
     <LinearLayout
         android:id="@+id/cardBasic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/background_list_menu"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textBasic">
+        app:layout_constraintTop_toBottomOf="@+id/view">
 
         <!-- Lista de acesso -->
         <androidx.cardview.widget.CardView
@@ -81,10 +77,11 @@
             android:layout_width="560px"
             android:layout_height="52px"
             android:layout_marginStart="24px"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
-            app:cardCornerRadius="5dp"
-            app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
@@ -92,7 +89,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -113,9 +109,9 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center"
-                    android:text="LISTA DE ACESSOS"
+                    android:text="RECIBO DE ACESSO"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -138,7 +134,8 @@
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
             android:layout_marginBottom="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -147,7 +144,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -168,9 +165,9 @@
                     android:layout_weight="1"
                     android:fontFamily="@font/lato_bold"
                     android:gravity="center"
-                    android:text="LISTA DE FUNCIONÁRIOS"
+                    android:text="FUNCIONÁRIOS"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -186,27 +183,17 @@
     </LinearLayout>
 
     <!-- Avançadas -->
-    <TextView
-        android:id="@+id/textAvancado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Avançado"
-        android:textColor="#696969"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/cardAvancado"
-        app:layout_constraintTop_toBottomOf="@+id/cardBasic" />
+
     <LinearLayout
         android:id="@+id/cardAvancado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#f4f4f4"
+        android:background="@drawable/background_list_menu"
         android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cardRestrito"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textAvancado">
+        app:layout_constraintTop_toBottomOf="@+id/cardBasic">
 
         <!-- Rede/Conexão -->
         <androidx.cardview.widget.CardView
@@ -216,7 +203,8 @@
             android:layout_marginStart="24px"
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -225,7 +213,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -248,7 +236,7 @@
                     android:gravity="center"
                     android:text="REDE/CONEXÃO"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -270,9 +258,9 @@
             android:layout_marginStart="24px"
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
@@ -280,7 +268,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -303,7 +291,7 @@
                     android:gravity="center"
                     android:text="INFORMAÇÕES DO SISTEMA"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -326,9 +314,9 @@
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
             android:layout_marginBottom="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
@@ -336,7 +324,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -359,7 +347,7 @@
                     android:gravity="center"
                     android:text="CONFIGURAÇÕES GERAIS"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -376,27 +364,17 @@
     </LinearLayout>
 
     <!-- Restrito -->
-    <TextView
-        android:id="@+id/textRestrito"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Restrito"
-        android:textColor="#696969"
-        android:textSize="15sp"
-        app:layout_constraintStart_toStartOf="@+id/cardRestrito"
-        app:layout_constraintTop_toBottomOf="@+id/cardAvancado" />
+
     <LinearLayout
         android:id="@+id/cardRestrito"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="#f4f4f4"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/background_list_menu"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textRestrito">
+        app:layout_constraintStart_toStartOf="parent">
 
         <!-- Produção -->
         <androidx.cardview.widget.CardView
@@ -406,7 +384,8 @@
             android:layout_marginStart="24px"
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -415,7 +394,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -438,7 +417,7 @@
                     android:gravity="center"
                     android:text="PRODUÇÃO"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -460,7 +439,8 @@
             android:layout_marginStart="24px"
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -469,7 +449,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -492,7 +472,7 @@
                     android:gravity="center"
                     android:text="TÉCNICO"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
@@ -515,9 +495,9 @@
             android:layout_marginTop="24px"
             android:layout_marginEnd="24px"
             android:layout_marginBottom="24px"
-            app:cardCornerRadius="5dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="0dp"
             app:cardElevation="0dp"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/view">
@@ -525,7 +505,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f4f4f4"
+                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -548,7 +528,7 @@
                     android:gravity="center"
                     android:text="RESTRITO"
                     android:textAlignment="textStart"
-                    android:textColor="#696969"
+                    android:textColor="#fff"
                     android:textSize="12sp" />
 
                 <!-- Ícone Final -->
