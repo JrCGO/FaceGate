@@ -59,7 +59,7 @@ class AnimationLogo : AppCompatActivity() {
 
                 override fun onAnimationEnd(animation: Animator) {
                     rootView.setBackgroundColor(Color.WHITE) // Muda a tela para branco
-                    startActivity(Intent(this@AnimationLogo, MainActivity::class.java))
+                    startActivity(Intent(this@AnimationLogo, CadastroUsuario::class.java))
                     finish()
                     overridePendingTransition(R.anim.basic_in, R.anim.basic_out);
                 }
