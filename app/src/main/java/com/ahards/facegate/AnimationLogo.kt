@@ -71,3 +71,4 @@ class AnimationLogo : AppCompatActivity() {
         }, 4000) // Inicia o efeito de zoom total após 2 segundos
     }
 }
+

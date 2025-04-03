@@ -39,3 +39,4 @@ class RecognizedActivity : AppCompatActivity() {
         }, 600)  // Tempo para concluir o basicOut antes da troca
     }
 }
+
