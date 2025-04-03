@@ -15,7 +15,7 @@ class ListAcess : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.listacess)
+        setContentView(R.layout.recibo_de_acesso)
 
         // Botão de voltar para o menu
         val menuArrow: ImageView = findViewById(R.id.btn_menu_arrow)
@@ -77,3 +77,4 @@ class ListAcess : AppCompatActivity() {
         }
     }
 }
+
