@@ -46,7 +46,7 @@ class AcessNotRecognizedActivity : AppCompatActivity() {
             // Finaliza a AcessSucessActivity
             finish()
             //overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
-            overridePendingTransition(R.anim.basic_in, R.anim.basic_out);
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }, 3000) // 3000ms = 3 segundos
     }
 

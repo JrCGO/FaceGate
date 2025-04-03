@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent) // Iniciando a nova Activity
             //overridePendingTransition(R.anim.zoom_in, R.anim.zoom_out);
             finish()
-            overridePendingTransition(R.anim.basic_in, R.anim.basic_out);
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
 
         }
 
@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AcessBlocked::class.java)
             startActivity(intent) // Iniciando a nova activity
             finish()
-            overridePendingTransition(R.anim.basic_in, R.anim.basic_out);
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
 
         }
 
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent) // Iniciando a nova activity
             finish()
-            overridePendingTransition(R.anim.basic_in, R.anim.basic_out);
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }
 
     }
