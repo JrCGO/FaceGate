@@ -93,43 +93,69 @@
             app:layout_constraintTop_toTopOf="@+id/caixaSearch"
             app:srcCompat="@drawable/icon_menu_filter" />
 
-        <RadioGroup
-            android:id="@+id/radioGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+        <LinearLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="478dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
             android:orientation="horizontal"
-            android:visibility="visible"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/caixaSearch"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/caixaSearch">
 
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="LIBERADO"
-                android:textSize="12sp" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                tools:visibility="gone">
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="NÃO RECONHECIDO"
-                android:textSize="12sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_filter_liberado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginStart="60dp"
+                    android:background="@drawable/btn_menu_filter"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="LIBERADO"
+                    android:textColor="@color/btn_menu_filter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:text="BLOQUEADO"
-                android:textSize="12sp" />
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_filter_bloqueado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@drawable/btn_menu_filter"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="BLOQUEADO"
+                    android:textColor="@color/btn_menu_filter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_filter_nreconhecido"
+                    app:layout_constraintStart_toEndOf="@+id/btn_filter_liberado"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-        </RadioGroup>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_filter_nreconhecido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginEnd="78dp"
+                    android:background="@drawable/btn_menu_filter"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:text="NEGADO"
+                    android:textColor="@color/btn_menu_filter"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
