@@ -14,30 +14,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FaceGate"
         tools:targetApi="31">
-
+        <activity
+            android:name=".Funcionarios"
+            android:exported="false" />
         <!-- Defina a AnimationLogo como a Activity inicial -->
         <activity
             android:name=".AnimationLogo"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Defina a MainActivity sem o intent-filter -->
+        </activity> <!-- Defina a MainActivity sem o intent-filter -->
         <activity
             android:name=".MainActivity"
-            android:exported="true" />
-
-        <!-- Outras Activities -->
+            android:exported="true" /> <!-- Outras Activities -->
         <activity android:name=".AcessSucessActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".AcessBlocked" />
         <activity android:name=".RecognizedActivity" />
         <activity android:name=".AcessNotRecognizedActivity" />
         <activity android:name=".ListAcess" />
-
     </application>
 
 </manifest>

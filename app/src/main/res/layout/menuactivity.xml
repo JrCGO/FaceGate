@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view">
 
-        <!-- Lista de acesso -->
+        <!-- Recibo de Acesso -->
         <androidx.cardview.widget.CardView
             android:id="@+id/menu_btn_listAcess"
             android:layout_width="560px"
@@ -117,7 +117,7 @@
 
         <!-- Lista de Funcionário -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/menu_btn_ListFuncionario"
+            android:id="@+id/menu_btn_Funcionario"
             android:layout_width="560px"
             android:layout_height="54dp"
             android:layout_marginTop="12dp"
@@ -131,7 +131,6 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#2165B7"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 

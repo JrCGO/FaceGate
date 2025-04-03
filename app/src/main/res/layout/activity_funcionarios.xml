@@ -44,7 +44,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/lato_bold"
-        android:text="RECIBO DE ACESSO"
+        android:text="FUNCIONÁRIOS"
         android:textColor="@color/White"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="@+id/btn_menu_arrow"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@+id/view">
 
         <EditText
-            android:id="@+id/caixaSearch"
+            android:id="@+id/caixaSearchFunc"
             android:layout_width="0dp"
             android:layout_height="54dp"
             android:layout_marginStart="60dp"
@@ -88,9 +88,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="60dp"
-            app:layout_constraintBottom_toBottomOf="@+id/caixaSearch"
+            app:layout_constraintBottom_toBottomOf="@+id/caixaSearchFunc"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/caixaSearch"
+            app:layout_constraintTop_toTopOf="@+id/caixaSearchFunc"
             app:srcCompat="@drawable/icon_menu_filter" />
 
         <LinearLayout
@@ -104,7 +104,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/caixaSearch">
+            app:layout_constraintTop_toBottomOf="@+id/caixaSearchFunc">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -113,46 +113,34 @@
                 tools:visibility="gone">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_filter_liberado"
+                    android:id="@+id/btn_filter_cadastrado"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:layout_marginStart="60dp"
                     android:background="@drawable/btn_menu_filter"
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
-                    android:text="LIBERADO"
+                    android:text="Cadastrado"
                     android:textColor="@color/btn_menu_filter"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_filter_bloqueado"
+                    android:id="@+id/btn_filter_semfacial"
                     android:layout_width="wrap_content"
                     android:layout_height="38dp"
                     android:layout_marginStart="24dp"
                     android:background="@drawable/btn_menu_filter"
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
-                    android:text="BLOQUEADO"
+                    android:text="Sem Cadastro"
                     android:textColor="@color/btn_menu_filter"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btn_filter_liberado"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintStart_toEndOf="@+id/btn_filter_cadastrado"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.6" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_filter_nreconhecido"
-                    android:layout_width="wrap_content"
-                    android:layout_height="38dp"
-                    android:layout_marginStart="24dp"
-                    android:background="@drawable/btn_menu_filter"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:text="NEGADO"
-                    android:textColor="@color/btn_menu_filter"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/btn_filter_bloqueado"
-                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
@@ -178,7 +166,7 @@
 
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewRecibo"
+                android:id="@+id/cardViewFunc"
                 android:layout_width="410dp"
                 android:layout_height="104dp"
                 android:layout_gravity="center"
@@ -222,33 +210,35 @@
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textViewStatusRecibo"
+                            android:id="@+id/textViewStatusCadastro"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: LIBERADO"
+                            android:text="STATUS: CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
                         <TextView
-                            android:id="@+id/textViewDataHoraRecibo"
+                            android:id="@+id/textViewCPF"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 104.xxx.xxx-82"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
                     </LinearLayout>
                 </LinearLayout>
+
+            <!-- Card: Funionário -->
             </androidx.cardview.widget.CardView>
             <!-- Card: Funionário -->
             <androidx.cardview.widget.CardView
-                android:id="@+id/cardViewRecibo"
+                android:id="@+id/cardViewFunc"
                 android:layout_width="410dp"
                 android:layout_height="104dp"
                 android:layout_gravity="center"
@@ -258,7 +248,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/border_card_func_bloqueado"
+                    android:background="@drawable/border_card_func_cadastrado"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:paddingStart="24dp"
@@ -292,13 +282,85 @@
                             android:textSize="14sp" />
 
                         <TextView
+                            android:id="@+id/textViewStatusCadastro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:text="STATUS: CADASTRADO"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/textViewCPF"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:text="CPF: 104.xxx.xxx-82"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Card: Funionário -->
+            </androidx.cardview.widget.CardView>
+            <!-- Card: Funionário -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewRecibo"
+                android:layout_width="410dp"
+                android:layout_height="104dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="18dp"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_card_func_semcadastro"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp">
+
+                    <!-- Foto do Funcionário -->
+                    <ImageView
+                        android:id="@+id/imgNot"
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:layout_marginEnd="24dp"
+                        android:contentDescription="Foto do Funcionário"
+                        android:src="@drawable/icon_menu_user_semcadastro" />
+
+                    <!-- Textos ao lado da imagem -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewNomeFunc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_regular"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
+                            android:text="NOME: ALEXANDRE GOULART"
+                            android:textColor="@color/textColor"
+                            android:textSize="14sp" />
+
+                        <TextView
                             android:id="@+id/textViewStatusRecibo"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: HORÁRIO NÃO PERMITIDO"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -309,7 +371,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -336,12 +398,12 @@
 
                     <!-- Foto do Funcionário -->
                     <ImageView
-                        android:id="@+id/imgFunc"
+                        android:id="@+id/imgNot"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_marginEnd="24dp"
                         android:contentDescription="Foto do Funcionário"
-                        app:srcCompat="@drawable/icon_not" />
+                        android:src="@drawable/icon_menu_user_semcadastro" />
 
                     <!-- Textos ao lado da imagem -->
                     <LinearLayout
@@ -357,7 +419,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="NOME: SEM INFORMAÇÕES"
+                            android:text="NOME: ALEXANDRE GOULART"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -368,7 +430,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: FACIAL NÃO RECONHECIDA"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -379,7 +441,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -406,12 +468,12 @@
 
                     <!-- Foto do Funcionário -->
                     <ImageView
-                        android:id="@+id/imgFunc"
+                        android:id="@+id/imgNot"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_marginEnd="24dp"
                         android:contentDescription="Foto do Funcionário"
-                        app:srcCompat="@drawable/icon_not" />
+                        android:src="@drawable/icon_menu_user_semcadastro" />
 
                     <!-- Textos ao lado da imagem -->
                     <LinearLayout
@@ -427,7 +489,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="NOME: SEM INFORMAÇÕES"
+                            android:text="NOME: ALEXANDRE GOULART"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -438,7 +500,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: FACIAL NÃO RECONHECIDA"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -449,7 +511,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -476,12 +538,12 @@
 
                     <!-- Foto do Funcionário -->
                     <ImageView
-                        android:id="@+id/imgFunc"
+                        android:id="@+id/imgNot"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_marginEnd="24dp"
                         android:contentDescription="Foto do Funcionário"
-                        app:srcCompat="@drawable/icon_not" />
+                        android:src="@drawable/icon_menu_user_semcadastro" />
 
                     <!-- Textos ao lado da imagem -->
                     <LinearLayout
@@ -497,7 +559,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="NOME: SEM INFORMAÇÕES"
+                            android:text="NOME: ALEXANDRE GOULART"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -508,7 +570,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: FACIAL NÃO RECONHECIDA"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -519,7 +581,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -546,12 +608,12 @@
 
                     <!-- Foto do Funcionário -->
                     <ImageView
-                        android:id="@+id/imgFunc"
+                        android:id="@+id/imgNot"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_marginEnd="24dp"
                         android:contentDescription="Foto do Funcionário"
-                        app:srcCompat="@drawable/icon_not" />
+                        android:src="@drawable/icon_menu_user_semcadastro" />
 
                     <!-- Textos ao lado da imagem -->
                     <LinearLayout
@@ -567,7 +629,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="NOME: SEM INFORMAÇÕES"
+                            android:text="NOME: ALEXANDRE GOULART"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -578,7 +640,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: FACIAL NÃO RECONHECIDA"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -589,7 +651,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -616,12 +678,12 @@
 
                     <!-- Foto do Funcionário -->
                     <ImageView
-                        android:id="@+id/imgFunc"
+                        android:id="@+id/imgNot"
                         android:layout_width="68dp"
                         android:layout_height="68dp"
                         android:layout_marginEnd="24dp"
                         android:contentDescription="Foto do Funcionário"
-                        app:srcCompat="@drawable/icon_not" />
+                        android:src="@drawable/icon_menu_user_semcadastro" />
 
                     <!-- Textos ao lado da imagem -->
                     <LinearLayout
@@ -637,7 +699,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="NOME: SEM INFORMAÇÕES"
+                            android:text="NOME: ALEXANDRE GOULART"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -648,7 +710,7 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="STATUS: FACIAL NÃO RECONHECIDA"
+                            android:text="STATUS: NÃO CADASTRADO"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
@@ -659,15 +721,13 @@
                             android:fontFamily="@font/lato_regular"
                             android:paddingTop="3dp"
                             android:paddingBottom="3dp"
-                            android:text="DATA/HORA: 23/03/2025 11:35"
+                            android:text="CPF: 285.xxx.xxx-32"
                             android:textColor="@color/textColor"
                             android:textSize="14sp" />
 
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
-
 
         </LinearLayout>
 

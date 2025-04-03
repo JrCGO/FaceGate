@@ -23,7 +23,7 @@ class MenuActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }
 
-        // Achando a botão: Lista de Acessos | Ir para ListAcess
+        // Achando a botão: Recibo de Acesso | Ir para ListAcess
         val AcessList: CardView = findViewById(R.id.menu_btn_listAcess)
         AcessList.setOnClickListener {
             val intent = Intent(this, ListAcess::class.java)
@@ -32,7 +32,14 @@ class MenuActivity : AppCompatActivity() {
             overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }
 
+        // Achando a botão: Funcionarios | Ir para Funcionarios
+        val AcessFuncionarios: CardView = findViewById(R.id.menu_btn_Funcionario)
+        AcessFuncionarios.setOnClickListener {
+            val intent = Intent(this, Funcionarios::class.java)
+            startActivity(intent)
+            finish()
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
+        }
 
     }
 }
-
