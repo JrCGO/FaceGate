@@ -27,6 +27,16 @@ class Funcionarios : AppCompatActivity() {
             overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
         }
 
+
+        // Achando o CardView: Funcionário | Ir para CadastroUsuario
+        val CadastroUser: CardView = findViewById(R.id.cardViewFunc)
+        CadastroUser.setOnClickListener {
+            val intent = Intent(this, CadastroUsuario::class.java)
+            startActivity(intent)
+            finish()
+            overridePendingTransition(R.anim.basic_in, R.anim.basic_out)
+        }
+
         // Botão para alternar a visibilidade do layout de filtros
         val filterIcon: ImageView = findViewById(R.id.icon_menu_filter)
         val filterLayout: LinearLayout = findViewById(R.id.filterLayout)

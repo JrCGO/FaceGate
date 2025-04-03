@@ -15,9 +15,11 @@
         android:theme="@style/Theme.FaceGate"
         tools:targetApi="31">
         <activity
-            android:name=".Funcionarios"
+            android:name=".CadastroUsuario"
             android:exported="false" />
-        <!-- Defina a AnimationLogo como a Activity inicial -->
+        <activity
+            android:name=".Funcionarios"
+            android:exported="false" /> <!-- Defina a AnimationLogo como a Activity inicial -->
         <activity
             android:name=".AnimationLogo"
             android:exported="true">
